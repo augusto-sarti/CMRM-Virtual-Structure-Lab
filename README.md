@@ -1,21 +1,20 @@
-# CMRM Virtual Structure Lab — integrated prototype 0.1
+# CMRM Virtual Structure Lab — dual recordings, bundled edition v0.3
 
-Open `index_offline.html` in a modern browser, or deploy the whole folder to GitHub Pages. The navigation includes Modules 1–3 (one page), 4, 5, 6, and 7. The original approved module packages in `/mnt/data` have **not been altered**.
+Two audio performances of Beethoven's *Für Elise* are bundled in `audio/` and have been decoded successfully in a media test.
 
-## Shared audio
-Choose one recording in the top panel. The host sends the file to each module when opened. Every module extracts its own descriptors; calculations and settings are intentionally isolated, so a module's results do not overwrite another's. The module's original file selector remains usable. For Module 6, shared audio loads as Performance A; use its separate selector for Performance B. Audio is not uploaded to any server.
+## Publishing to GitHub Pages
 
-## Usage caveats
-- Analysis can take time on full-length recordings, particularly when first opening another module.
-- When switching modules, their playback is paused, but already visited modules stay loaded.
-- The direct Wikimedia OGG download may be blocked by network policies; use the recording link and select a local file instead.
-- Individual modules retain their original UI, so this is **functional integration**, not the final design-system consolidation.
-- Module 7 form annotations remain local to its active page; CSV export is available there.
-- Licensing: https://commons.wikimedia.org/wiki/File:FurElise.ogg (V. Gao, CC0 as indicated by the Commons page). The recommended recording itself is not bundled.
+Upload the **contents** of this folder (not the folder itself) to the root of the `CMRM-Virtual-Structure-Lab` repository, preserving the `audio/` and `modules/` directories. GitHub Pages serves `index.html` automatically. When served via HTTPS/HTTP, the site loads both bundled files automatically. If it does not, press **Load both default performances**.
 
-## Preserved source versions
-- CMRM_Structure_Lab_Modules1-3_Audio_Revision_v01
-- CMRM_Structure_Lab_Module4_Audio_CC0_v05
-- CMRM_Structure_Lab_Module5_Feature_Fusion_v02
-- CMRM_Structure_Lab_Module6_DTW_v01
-- CMRM_Structure_Lab_Module7_Integrated_Form_v02
+Modules 1–5 and 7 use Performance A, and Module 6 compares A and B. Both source recordings can be replaced independently using file inputs. Uploaded audio stays in the browser.
+
+When opening `index_offline.html` with file://, browsers may prohibit fetch() of nearby files. If the automatic defaults fail, select the two bundled OGG files via the file inputs or run a local HTTP server.
+
+## Licensing
+
+- A: V. Gao, CC0 1.0.
+- B: Jason M. C. Han, CC BY-SA 4.0, attribution is required.
+
+Consult `AUDIO_CREDITS.md`; retain it when publishing. The OGG recordings are bundled unchanged.
+
+This updates the unified site only; previous approved module source files are retained inside `modules/`. End-to-end browser behavior should be checked after upload.
